@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ParkLy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Dtc-bt-WrB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCP-WX-eAS">
+                                <rect key="frame" x="150" y="562" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="dwq-Bv-GuI"/>
+                                    <constraint firstAttribute="height" constant="75" id="nxG-4G-eOd"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="parkCar"/>
+                                <connections>
+                                    <action selector="parkBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lJS-4O-44l"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ParkLy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Na-CM-m3c">
+                                <rect key="frame" x="74" y="20" width="227.5" height="117"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="85"/>
+                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dtc-bt-WrB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0Na-NV-Nv3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dtc-bt-WrB" secondAttribute="bottom" id="3GK-dx-30P"/>
+                            <constraint firstItem="5Na-CM-m3c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9YW-h2-5gA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BCP-WX-eAS" secondAttribute="bottom" constant="30" id="JRv-Ry-alF"/>
+                            <constraint firstItem="Dtc-bt-WrB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Rux-qh-4nb"/>
+                            <constraint firstItem="5Na-CM-m3c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="TA9-ma-7hE"/>
+                            <constraint firstAttribute="trailing" secondItem="Dtc-bt-WrB" secondAttribute="trailing" id="bv1-O2-vkp"/>
+                            <constraint firstItem="BCP-WX-eAS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rt3-wP-cR5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Dtc-bt-WrB" id="TL7-rR-Mcx"/>
+                        <outlet property="parkBtn" destination="BCP-WX-eAS" id="baD-so-sRw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="parkCar" width="1024" height="1024"/>
+    </resources>
+</document>
